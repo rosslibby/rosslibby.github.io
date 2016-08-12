@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ross Libby Dev</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+    <style>
+        input {
+            border: 1px solid #ececec;
+            box-shadow: 0 0 5px #efefef;
+            font-family: 'Roboto', sans-serif;
+            margin: 5px 0;
+            padding: 10px 15px;
+            width: 300px;
+        }
+
+        div.container {
+            margin: 100px auto;
+            width: 420px;
+        }
+
+        div.wrapper {
+            float: left;
+            width: 100%;
+        }
+
+        .labels {
+            float: left;
+            width: 74px;
+        }
+
+        .labels label {
+            display: block;
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            padding: 13px 8px;
+            text-align: right;
+            width: 100%;
+        }
+
+        .inputs {
+            width: 330px;
+            float: right;
+        }
+
+        input::last-child {
+            margin-left: 40px;
+        }
+
+        pre {
+            display: block;
+            float: left;
+        }
+
+        code {
+            background-color: #efefef;
+            border-radius: 4px;
+            display: block;
+            padding: 12px 15px;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="labels">
+                <label>URL</label>
+                <label>SKU</label>
+                <label>SuperDeal</label>
+            </div>
+            <div class="inputs">
+                <input id="url" class="url" value="https://www.hardwareconnect.com/p/" />
+                <input id="sku" value="" />
+                <input id="superDeal" value="" />
+                <input id="store" value="" />
+            </div>
+        </div>
+
+        <pre>
+            <code id="link"></code>
+        </pre>
+    </div>
+
+    <script src="http://bit.ly/jquerycdn"></script>
+    <script>
+        $(document).ready(function () {
+            var url = $('#url').val();
+            var sku = $('#sku').val();
+            var superDeal = $('#superDeal').val();
+            var store = $('#store').val();
+
+            function buildLink (url, sku, superDeal, store) {
+                if (superDeal !== '') {
+                    superDeal = '?superDeal=' + superDeal;
+                }
+
+                if (store !== '' && superDeal !== '') {
+                    store = '&store=' + store;
+                }
+
+                $('#link').text(url + sku + superDeal + store);
+            }
+
+            $('#sku').on('keyup', function (e) {
+                sku = $(this).val();
+                buildLink(url, sku, superDeal, store);
+            });
+
+            $('#url').on('keyup', function (e) {
+                url = $(this).val();
+                buildLink(url, sku, superDeal, store);
+            });
+
+            $('#superDeal').on('keyup', function (e) {
+                superDeal = $(this).val();
+                buildLink(url, sku, superDeal, store);
+            });
+
+            $('#store').on('keyup', function (e) {
+                store = $(this).val();
+                buildLink(url, sku, superDeal, store);
+            });
+        });
+    </script>
+</body>
+</html>
