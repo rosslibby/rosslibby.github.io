@@ -17,14 +17,20 @@
             width: 300px;
         }
 
+        div.row {
+            float: left;
+            width: 100%;
+        }
+
         div.container {
             margin: 100px auto;
-            width: 420px;
+            width: 100%;
         }
 
         div.wrapper {
-            float: left;
-            width: 100%;
+            display: block;
+            margin: 0 auto;
+            width: 420px;
         }
 
         .labels {
@@ -52,7 +58,8 @@
 
         pre {
             display: block;
-            float: left;
+            margin: 0 auto;
+            width: 50%;
         }
 
         code {
@@ -68,24 +75,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="wrapper">
-            <div class="labels">
-                <label>URL</label>
-                <label>SKU</label>
-                <label>SuperDeal</label>
-                <label>Store</label>
-            </div>
-            <div class="inputs">
-                <input id="url" class="url" value="https://www.hardwareconnect.com/p/" />
-                <input id="sku" value="" />
-                <input id="superDeal" value="" />
-                <input id="store" value="" />
+        <div class="row">
+            <div class="wrapper">
+                <div class="labels">
+                    <label>URL</label>
+                    <label>SKU</label>
+                    <label>SuperDeal</label>
+                    <label>Store</label>
+                </div>
+                <div class="inputs">
+                    <input id="url" class="url" value="https://www.hardwareconnect.com/p/" />
+                    <input id="sku" value="" />
+                    <input id="superDeal" value="" />
+                    <input id="store" value="" />
+                </div>
             </div>
         </div>
-
-        <pre>
-            <code id="link"></code>
-        </pre>
+        <div class="row">
+            <pre>
+                <code id="link"></code>
+            </pre>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
