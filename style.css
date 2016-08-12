@@ -1,0 +1,63 @@
+input {
+    border: 1px solid #ececec;
+    box-shadow: 0 0 5px #efefef;
+    font-family: 'Roboto', sans-serif;
+    margin: 5px 0;
+    padding: 10px 15px;
+    width: 300px;
+}
+
+div.row {
+    float: left;
+    width: 100%;
+}
+
+div.container {
+    margin: 100px auto;
+    width: 100%;
+}
+
+div.wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 420px;
+}
+
+.labels {
+    float: left;
+    width: 74px;
+}
+
+.labels label {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    padding: 13px 8px;
+    text-align: right;
+    width: 100%;
+}
+
+.inputs {
+    width: 330px;
+    float: right;
+}
+
+input::last-child {
+    margin-left: 40px;
+}
+
+pre {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+code {
+    background-color: #efefef;
+    border-radius: 4px;
+    display: block;
+    height: 20px;
+    padding: 12px 15px;
+    text-align: center;
+    width: 100%;
+}
