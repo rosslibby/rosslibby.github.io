@@ -1,0 +1,304 @@
+<html>
+  <head>
+    <title>Our first website</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/e21d1f3409.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="about about--center">
+      <h1>Let's talk about <span>websites</span>.</h1>
+      <span class="about-arrow"><i class="fa-thin fa-angle-down"></i></span>
+    </div>
+    <div class="html">
+      <h1 id="html">HTML</h1>
+      <h3 id="html-description">Hyper Text Markup Language</h3>
+    </div>
+    <div class="difference">
+      <div class="column">
+        <h1><strong>Programming</strong> languages</h1>
+        <ul>
+          <li>Programming languages deal with logic</li>
+          <li>Programming languages enable us to automate tasks</li>
+
+          <li>Programming languages are necessary for functionality and interactivity in websites, applications and tangible electronics</li>
+        </ul>
+      </div>
+      <div class="column">
+        <h1><strong>Markup</strong> languages</h1>
+        <ul>
+          <li>Markup languages provide form &amp; structure to information</li>
+          <li>Markup is useful for transferring data quickly across vast physical distances</li>
+          <li>Markup languages [can] display data</li>
+        </ul>
+      </div>
+    </div>
+    <div class="how-to">
+      <h1>✨ Lesson Time ✨</h1>
+      <p>HTML is made up of <strong>tags</strong>. These tags render various <strong>elements</strong> such as text, images and interactive controls.</p>
+      <p>The anatomy of an HTML tag is simple.<br>Each tag starts with a left-angle-brace <code>&lt;</code> and ends with a right-angle-brace <code>&gt;</code>, with the name of the tag between those two braces:</p>
+      <p>
+        <code>&lt;title&gt;This code sets the title of a website&lt;/title&gt;</code>
+      </p>
+      <p>You may have noticed above that we have an <strong>opening tag</strong> <code>&lt;title&gt;</code> and a <strong>closing tag</strong> <code>&lt;/title&gt;</code>. The only difference between the opening and closing tags is that <em>the closing tag has a forward-slash <code>/</code> before the tag name</em>.</p>
+      <p><small>*Every tag that contains another element <em>must</em> have both an opening-tag and a closing-tag.</small></p>
+      <p>We can make a website simply by creating a file and naming it <em>literally anything</em> as long as we put <code>.html</code> as the extension. Any file with a <code>.html</code> extension can be opened and viewed in a web browser, such as Google Chrome or Safari (I prefer Google Chrome when I am writing code).</p>
+      <p>I created a file called <strong>lesson-1.html</strong></p>
+      <p>Once we have created our html file, we always have to start out the same way: <em>write the opening and closing <strong>html tags</strong></em></p>
+      <p class="code-block">
+        <code>&nbsp;&lt;html&gt;&nbsp;&nbsp;<br>&nbsp;&lt;/html&gt;&nbsp;</code>
+      </p>
+      <p>This lets the web browser know that everything <em>between those tags</em> is part of the website's code.</p>
+      <p>HTML websites have their own anatomy. Each has a <strong>head</strong> and a <strong>body</strong>. The <strong>head</strong> tag contains all the information that is important for the browser to know while being extraneous to the website's users, while the <strong>body</strong> contains all the information that is <em>supposed</em> to be shown to users. As you have probably guessed, those tags look like this: <code>&lt;head&gt;&lt;/head&gt;</code> <code>&lt;body&gt;&lt;/body&gt;</code></p>
+      <p>After adding the <strong>head</strong> and <strong>body</strong> tags, our code should look like this:</p>
+      <p class="code-block">
+        <code>
+          &lt;html&gt;
+          <br>
+          &nbsp;&nbsp;&lt;head&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/head&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&lt;body&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/body&gt;
+          <br>
+          &lt;/html&gt;
+        </code>
+      </p>
+      <p>Let's add a title that will show up in the browser tab when someone is visiting our website. We do that by adding a <code>&lt;title&gt;</code> tag to the <strong>head</strong>:</p>
+      <p class="code-block">
+        <code>
+          &lt;html&gt;
+          <br>
+          &nbsp;&nbsp;&lt;head&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lesson 1 Example Website&lt;/title&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/head&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&lt;body&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/body&gt;
+          <br>
+          &lt;/html&gt;
+        </code>
+      </p>
+      <p>Now, let's display some information on our website! We can start with a simple heading that welcomes our website visitors.</p>
+      <p>HTML has 6 different sizes of headings. Each has its own numbered tag in which the smaller the number, the higher priority that heading is (aka smaller number = bigger heading). The <strong>heading tags</strong> are as follow: <strong>h1</strong>, <strong>h2</strong>, <strong>h3</strong>, <strong>h4</strong>, <strong>h5</strong> and <strong>h6</strong>:</p>
+      <h1>Heading 1</h1>
+      <p><code>&lt;h1&gt;Your text here&lt;/h1&gt;</code></p>
+      <h2>Heading 2</h2>
+      <p><code>&lt;h2&gt;Your text here&lt;/h2&gt;</code></p>
+      <h3>Heading 3</h3>
+      <p><code>&lt;h3&gt;Your text here&lt;/h3&gt;</code></p>
+      <h4>Heading 4</h4>
+      <p><code>&lt;h4&gt;Your text here&lt;/h4&gt;</code></p>
+      <h5>Heading 5</h5>
+      <p><code>&lt;h5&gt;Your text here&lt;/h5&gt;</code></p>
+      <h6>Heading 6</h6>
+      <p><code>&lt;h6&gt;Your text here&lt;/h6&gt;</code></p>
+      <p>For now, I am going to go with the largest option, <strong>h1</strong>:</p>
+      <p class="code-block">
+        <code>
+          &lt;html&gt;
+          <br>
+          &nbsp;&nbsp;&lt;head&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lesson 1 Example Website&lt;/title&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/head&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&lt;body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to this ugly af website&lt;/h1&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/body&gt;
+          <br>
+          &lt;/html&gt;
+        </code>
+      </p>
+      <p>Let's add just two more pieces of content to our website before we view the final result. I think an image and a short paragraph would be a good start!</p>
+      <p>The <strong>paragraph tag</strong> in HTML is very simple: <code>&lt;p&gt;Your text here&lt;/p&gt;</code></p>
+      <p>The <strong>image tag</strong> is a little bit more complicated. Image tags are one of the tags that <em>does not require a closing tag</em>, which means that we have to put the image's information (aka the link to the image) <em>directly in the tag</em>. This is how an image tag works:</p>
+      <p><code>&lt;img src="the_link_to_your_image"&gt;</code></p>
+      <p>Let's find an image on Google Images. I found this one that looked pretty cool: <code>https://www.discotech.me/wp-content/uploads/2019/03/illenium.jpg</code></p>
+      <p>Now, let's add our paragraph and our image to our HTML file:</p>
+      <p class="code-block">
+        <code>
+          &lt;html&gt;
+          <br>
+          &nbsp;&nbsp;&lt;head&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Lesson 1 Example Website&lt;/title&gt;
+          <br>
+          &nbsp;&nbsp;&lt;/head&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&lt;body&gt;
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to this ugly af website&lt;/h1&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;img src="https://www.discotech.me/wp-content/uploads/2019/03/illenium.jpg"&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+          <br>
+          <br>
+          &nbsp;&nbsp;&lt;/body&gt;
+          <br>
+          &lt;/html&gt;
+        </code>
+      </p>
+    </div>
+    <main>
+      <div class="column">
+        <!-- <label><b>Headings</b></label> -->
+        <div class="element">
+          <label>Heading 1</label>
+          <h1>Heading 1</h1>
+          <code>&lt;h1&gt;...&lt;/h1&gt;</code>
+        </div>
+        <div class="element">
+          <label>Heading 2</label>
+          <h2>Heading 2</h2>
+          <code>&lt;h2&gt;...&lt;/h2&gt;</code>
+        </div>
+        <div class="element">
+          <label>Heading 3</label>
+          <h3>Heading 3</h3>
+          <code>&lt;h3&gt;...&lt;/h3&gt;</code>
+        </div>
+        <div class="element">
+          <label>Heading 4</label>
+          <h4>Heading 4</h4>
+          <code>&lt;h4&gt;...&lt;/h4&gt;</code>
+        </div>
+        <div class="element">
+          <label>Heading 5</label>
+          <h5>Heading 5</h5>
+          <code>&lt;h5&gt;...&lt;/h5&gt;</code>
+        </div>
+        <div class="element">
+          <label>Heading 6</label>
+          <h6>Heading 6</h6>
+          <code>&lt;h6&gt;...&lt;/h6&gt;</code>
+        </div>
+      </div>
+      <div class="column">
+        <!-- <label><b>Interactive</b></label> -->
+        <div class="element">
+          <label>Text input</label>
+          <input type="text" placeholder="Enter text">
+          <code>&lt;input type="text"&gt;</code>
+        </div>
+        <div class="element">
+          <label>Email input</label>
+          <input type="email" placeholder="Enter your email">
+          <code>&lt;input type="email"&gt;</code>
+        </div>
+        <div class="element">
+          <label>Number input</label>
+          <input type="number" placeholder="Enter a number">
+          <code>&lt;input type="number"&gt;</code>
+        </div>
+        <div class="element">
+          <label>Slider</label>
+          <input type="range">
+          <code>&lt;input type="range"&gt;</code>
+        </div>
+        <div class="element">
+          <label>Color picker</label>
+          <input type="color">
+          <code>&lt;input type="color"&gt;</code>
+        </div>
+        <div class="element">
+          <label>Dropdown</label>
+          <select>
+            <option>Option 1</option>
+            <option>Option 2</option>
+            <option>Option 3</option>
+          </select>
+          <code>&lt;select&gt;<br>&nbsp;&nbsp;&lt;option&gt;...&lt;/option&gt;<br>&lt;select&gt;</code>
+        </div>
+      </div>
+      <div class="column">
+        <div class="element">
+          <label>Paragraph</label>
+          <p>Any text can go here...</p>
+          <code>&lt;p&gt;...&lt;/p&gt;</code>
+        </div>
+        <div class="element">
+          <label>Bold text</label>
+          <b>This text is bold</b>
+          <code>&lt;b&gt;...&lt;/b&gt;</code>
+        </div>
+        <div class="element">
+          <label>Italic text</label>
+          <i>This text is italic</i>
+          <code>&lt;i&gt;...&lt;/i&gt;</code>
+        </div>
+        <div class="element">
+          <label>Underlined text</label>
+          <u>This text is underlined</u>
+          <code>&lt;u&gt;...&lt;/u&gt;</code>
+        </div>
+        <div class="element">
+          <label>Strikethrough text</label>
+          <s>This text has a line through it</s>
+          <code>&lt;s&gt;...&lt;/s&gt;</code>
+        </div>
+        <div class="element">
+          <label>Link</label>
+          <a href="https://twitter.com/illenium">Click to visit Twitter</a>
+          <code>&lt;a href="..."&gt;...&lt;/a&gt;</code>
+        </div>
+      </div>
+      <div class="column">
+        <div class="element">
+          <label>Button</label>
+          <button>Button</button>
+          <code>&lt;button&gt;...&lt;/button&gt;</code>
+        </div>
+        <div class="element">
+          <label>Superscript</label>
+          <p>The following text is <sup>superscripted</sup></p>
+          <code>&lt;sup&gt;...&lt;/sup&gt;</code>
+        </div>
+        <div class="element">
+          <label>Subscript</label>
+          <p>The following text is <sub>subscripted</sub></p>
+          <code>&lt;sub&gt;...&lt;/sub&gt;</code>
+        </div>
+        <div class="element">
+          <label>Image</label>
+          <img src="https://dancingastronaut.com/wp-content/uploads/2020/11/aLIVE-Coverage-for-Insomniac-edc-orlando-e1605375785648.jpg" style="width: 50%;" />
+          <code>&lt;img src="..."&gt;</code>
+        </div>
+        <div class="element">
+          <label>Unordered list</label>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ul>
+          <code>&lt;ul&gt;<br>&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>&lt;/ul&gt;</code>
+        </div>
+        <div class="element">
+          <label>Ordered list</label>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+          </ol>
+          <code>&lt;ol&gt;<br>&nbsp;&nbsp;&lt;li&gt;...&lt;/li&gt;<br>&lt;/ol&gt;</code>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
