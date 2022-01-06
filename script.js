@@ -122,15 +122,26 @@ const validateCodeString = (e, finalString, regexStr, strictContent = false) => 
  */
 const htmlTagTest = document.getElementById('write-html-tag')
 const paragraphTagTest = document.getElementById('write-paragraph-tag')
+const nestedBoldTagTest = document.getElementById('write-nested-bold-tag')
 
 /**
  * Set up the code test validations
  */
 const writeHTMLTag = e => validateCodeString(e, '<html></html>', '<html></html>', true)
 const writeParagraphTag = e => validateCodeString(e, '<p>Write any text you want here.</p>', '<p>(.*?)</p>')
+const writeNestedBoldTag = e => validateCodeString(e, '<p>Let\'s be honest: writing code is <b>the most boring thing ever!</b></p>', '<p>(.*?) <b>(.*?)</b>(.*?)</p>')
 
 /**
  * Listen for code test interaction
  */
 htmlTagTest.addEventListener('keyup', writeHTMLTag)
 paragraphTagTest.addEventListener('keyup', writeParagraphTag)
+nestedBoldTagTest.addEventListener('keyup', e => {
+  writeNestedBoldTag(e)
+
+  /**
+   * Demo the test result
+   */
+  const demoNestedBoldText = document.getElementById('nested-bold-text-demo')
+  demoNestedBoldText.innerHTML = e.target.value
+})
