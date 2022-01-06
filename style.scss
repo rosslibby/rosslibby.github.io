@@ -26,13 +26,13 @@ body {
   }
 
   &-arrow {
-    font-size: 8rem;
+    font-size: 8vw;
   }
 
   h1 {
     color: #2e2e2e;
     font-family: $font;
-    font-size: 8rem;
+    font-size: 8vw;
     font-weight: 200;
     text-align: center;
 
@@ -74,7 +74,7 @@ body {
     color: #ffffff;
     cursor: pointer;
     font-family: $font;
-    font-size: 16rem;
+    font-size: 16vw;
     font-weight: 700;
     margin: 0;
     padding: 0 2.5rem;
@@ -116,6 +116,19 @@ body {
   height: 120vh;
   margin: 0 auto;
   width: 100vw;
+
+  @media screen and (max-width: 30rem) {
+    flex-direction: column;
+    height: 240vh;
+
+    .column {
+      width: 100%;
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
+  }
 
   h1 {
     box-sizing: border-box;
@@ -171,6 +184,10 @@ body {
   padding-bottom: 30rem;
   width: 100vw;
 
+  @media screen and (max-width: 30rem) {
+    padding: 0 1.5rem;
+  }
+
   .title {
     border-bottom: .5rem solid #6600ff;
     border-radius: .5rem;
@@ -179,6 +196,11 @@ body {
     padding: 2rem;
     text-align: center;
     margin: 2em 0;
+
+    @media screen and (max-width: 30rem) {
+      font-size: 2rem;
+      padding: 1rem 0;
+    }
   }
 
   p {
@@ -192,11 +214,21 @@ body {
       border-bottom: 2px solid #6600ff;
       color: #ffffff;
     }
+
+    @media screen and (max-width: 30rem) {
+      font-size: 1.125rem;
+      line-height: 2.125rem;
+    }
   }
 
   .code {
     font-size: 8rem;
     font-weight: 300;
+
+    @media screen and (max-width: 30rem) {
+      font-size: .825rem;
+      overflow: scroll;
+    }
   }
 }
 
@@ -210,6 +242,20 @@ main {
   flex-direction: row;
   margin: 0 auto;
   width: 100vw;
+
+  @media screen and (max-width: 30rem) {
+    flex-direction: column;
+
+    .column {
+      width: 100vw;
+
+      .element {
+        height: auto;
+        margin: 5vw;
+        width: 90vw;
+      }
+    }
+  }
 }
 
 .column {
@@ -264,13 +310,24 @@ pre {
   background-color: #1d435e;
 }
 
+.code-container {
+  border-radius: .325rem;
+  overflow: scroll;
+}
+
 code {
   padding: 0.625rem;
   background-color: #1d435e;
   color: #00fff5;
   border-radius: 0.325rem;
   box-sizing: border-box;
-  word-break: break-all;
+
+  @media screen and (max-width: 30rem) {
+    display: inline-flex;
+    white-space: nowrap;
+    font-size: .825rem;
+    letter-spacing: 0;
+  }
 }
 
 .code-block {
@@ -397,6 +454,20 @@ h6 + code {
 
     &.invalid {
       color: #ff004c;
+    }
+  }
+
+  @media screen and (max-width: 30rem) {
+    min-height: 4rem;
+    padding: .625rem;
+
+    input, label {
+      font-size: 1.125rem;
+    }
+
+    label {
+      left: calc(1.25rem - 5px);
+      top: calc(1.25rem - 3px);
     }
   }
 }

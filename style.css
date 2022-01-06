@@ -22,12 +22,12 @@ body {
   align-items: center;
 }
 .about-arrow {
-  font-size: 8rem;
+  font-size: 8vw;
 }
 .about h1 {
   color: #2e2e2e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 8rem;
+  font-size: 8vw;
   font-weight: 200;
   text-align: center;
 }
@@ -65,7 +65,7 @@ body {
   color: #ffffff;
   cursor: pointer;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16rem;
+  font-size: 16vw;
   font-weight: 700;
   margin: 0;
   padding: 0 2.5rem;
@@ -101,6 +101,18 @@ body {
   height: 120vh;
   margin: 0 auto;
   width: 100vw;
+}
+@media screen and (max-width: 30rem) {
+  .difference {
+    flex-direction: column;
+    height: 240vh;
+  }
+  .difference .column {
+    width: 100%;
+  }
+  .difference .column h1 {
+    font-size: 3rem;
+  }
 }
 .difference h1 {
   box-sizing: border-box;
@@ -149,6 +161,11 @@ body {
   padding-bottom: 30rem;
   width: 100vw;
 }
+@media screen and (max-width: 30rem) {
+  .how-to {
+    padding: 0 1.5rem;
+  }
+}
 .how-to .title {
   border-bottom: 0.5rem solid #6600ff;
   border-radius: 0.5rem;
@@ -157,6 +174,12 @@ body {
   padding: 2rem;
   text-align: center;
   margin: 2em 0;
+}
+@media screen and (max-width: 30rem) {
+  .how-to .title {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
 }
 .how-to p {
   color: rgba(255, 255, 255, 0.65);
@@ -169,9 +192,21 @@ body {
   border-bottom: 2px solid #6600ff;
   color: #ffffff;
 }
+@media screen and (max-width: 30rem) {
+  .how-to p {
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+  }
+}
 .how-to .code {
   font-size: 8rem;
   font-weight: 300;
+}
+@media screen and (max-width: 30rem) {
+  .how-to .code {
+    font-size: 0.825rem;
+    overflow: scroll;
+  }
 }
 
 /**
@@ -183,6 +218,19 @@ main {
   flex-direction: row;
   margin: 0 auto;
   width: 100vw;
+}
+@media screen and (max-width: 30rem) {
+  main {
+    flex-direction: column;
+  }
+  main .column {
+    width: 100vw;
+  }
+  main .column .element {
+    height: auto;
+    margin: 5vw;
+    width: 90vw;
+  }
 }
 
 .column {
@@ -230,13 +278,25 @@ pre {
   background-color: #1d435e;
 }
 
+.code-container {
+  border-radius: 0.325rem;
+  overflow: scroll;
+}
+
 code {
   padding: 0.625rem;
   background-color: #1d435e;
   color: #00fff5;
   border-radius: 0.325rem;
   box-sizing: border-box;
-  word-break: break-all;
+}
+@media screen and (max-width: 30rem) {
+  code {
+    display: inline-flex;
+    white-space: nowrap;
+    font-size: 0.825rem;
+    letter-spacing: 0;
+  }
 }
 
 .code-block {
@@ -349,6 +409,19 @@ h6 + code {
 }
 .code-editor input.invalid {
   color: #ff004c;
+}
+@media screen and (max-width: 30rem) {
+  .code-editor {
+    min-height: 4rem;
+    padding: 0.625rem;
+  }
+  .code-editor input, .code-editor label {
+    font-size: 1.125rem;
+  }
+  .code-editor label {
+    left: calc(1.25rem - 5px);
+    top: calc(1.25rem - 3px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
