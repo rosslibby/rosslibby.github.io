@@ -171,10 +171,8 @@ body {
   padding-bottom: 30rem;
   width: 100vw;
 
-  h1 {
-    border: .5rem solid #6600ff;
-    border-left: 0;
-    border-right: 0;
+  .title {
+    border-bottom: .5rem solid #6600ff;
     border-radius: .5rem;
     font-size: 4rem;
     font-weight: 100;
@@ -292,4 +290,82 @@ h4 + code,
 h5 + code,
 h6 + code {
   margin-top: -0.75rem;
+}
+
+/**
+ * Interactive code editor
+ */
+
+.code-editor {
+  align-items: center;
+  background-color: #1d435e;
+  border: .325rem solid transparent;
+  border-radius: .325rem;
+  box-sizing: border-box;
+  display: flex;
+  font-family: $font;
+  min-height: 5rem;
+  padding: 1.25rem;
+  position: relative;
+  transition: all .15s ease-in-out;
+
+  &--invalid {
+    border-color: #ff004c;
+  }
+
+  &--valid {
+    border-color: #00ffe7;
+  }
+
+  &-label {
+    color: rgba(3, 7, 24, .55);
+    font-family: $font;
+    font-size: 2rem;
+    font-weight: 200;
+    left: calc(1.25rem + 1px);
+    position: absolute;
+    top: calc(1.25rem + 1px);
+    z-index: 1;
+
+    .invisible {
+      display: none;
+    }
+  }
+
+  &-badge {
+    font-size: 2rem;
+
+    &--invalid {
+      color: #ff004c;
+    }
+
+    &--valid {
+      color: #00ffe7;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    border: 0;
+    color: #ffffff;
+    display: flex;
+    font-family: $font;
+    flex-grow: 1;
+    font-size: 2rem;
+    font-weight: 200;
+    position: relative;
+    z-index: 2;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.valid {
+      color: #00ffe7;
+    }
+
+    &.invalid {
+      color: #ff004c;
+    }
+  }
 }
