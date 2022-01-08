@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <title>Our first website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="dev-environment.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/material-palenight.min.css" integrity="sha512-uIAyXysSwPKYTS4BrBQGkt7i9ozdNjNA4jXfjFDl6fWIc2zDllleoiY5EkH7Ib2j+Qb8YJx4a5qy192JZqxqVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/e21d1f3409.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="about about--center">
+      <h1>Setting up your <span>dev environment</span></h1>
+      <span class="about-arrow"><i class="fa-thin fa-angle-down"></i></span>
+    </div>
+    <div class="difference">
+      <div class="column column--sole">
+        <h1><strong>Google Chrome</strong> browser</h1>
+        <ul>
+          <li>Integrated development tools</li>
+          <li>Network output (requests &amp; responses)</li>
+          <li>Local inline-editing</li>
+        </ul>
+        <p>Download Google Chrome <a href="https://google.com/chrome" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--vscode">
+        <h1><strong>Visual Studio Code</strong> IDE</h1>
+        <ul>
+          <li>Integrated Development Environment (IDE)</li>
+          <li>Supports 16 languages out of the box</li>
+          <li>Automatic code highlighting</li>
+          <li>Custom themes for appearance</li>
+          <li>Built-in terminal (useful for command line tools)</li>
+        </ul>
+        <p>Download Visual Studio Code <a href="https://code.visualstudio.com" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--github">
+        <h1><strong>Github</strong> code versioning tool</h1>
+        <ul>
+          <li>Cloud-hosted code repositories</li>
+          <li>Code versioning</li>
+          <li>Code history</li>
+          <li>Collaboration tooling</li>
+        </ul>
+        <p>Sign up for Github <a href="https://github.com" target="_blank">here</a>.</p>
+
+        <p>Important Git commands:</p>
+
+        <textarea id="git-codearea">
+          # the `git add` command adds modified files and/or directories to your local repository
+          git add .              # << adds every modified file and/or directory in the current working directory to your local git repository
+          git add file_name.ext  # << adds the file `file_name.ext` to your local git repository
+          git add folder_name    # << adds the folder `folder_name` to your local git repository
+
+          # the `git commit` command captures a snapshot of your project's current changes. You must add a commit message using the `-m` flag.
+          git commit -m 'updated the color of the "sign-up" button'
+
+          # the `git push` command uploads your changes to you cloud-based git repository, storing your code online so that you can access it from anywhere
+          git push
+
+          # the `git branch` command shows the current branch you are working in.
+          # If your code project were represented by a tree, each branch would be
+          # a different feature you are working on. For example, one "branch" of the
+          # tree could be the content of your website, while another could be the
+          # interactive portion, such as sign-up or login functionality.
+          # While each of these branches has the same underlying code (since they
+          # are on the same tree), making a change to one branch does not modify
+          # any of the other branches
+          git branch
+
+          # the `git checkout` command selects the branch you wish to work in
+          git checkout branch-name
+
+          # the `git pull` command downloads the most current code from your online repository
+          git pull
+
+          # the `git log` command shows you a record of each change that has been made in your git repository
+          git log
+        </textarea>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--git-bash">
+        <h1><strong>Git Bash</strong> terminal</h1>
+        <ul>
+          <li>Supports unix commands in a Windows environment</li>
+          <li>Integrates with VSCode <span>code</span> command</li>
+          <li>Streamlines development</li>
+        </ul>
+        <p>Download Git Bash <a href="https://git-scm.com/download" target="_blank">here</a>.</p>
+
+        <p>Need-to-know commands:</p>
+
+        <textarea id="git-bash-codearea">
+          # the `cd` command changes the directory (aka it is used to navigate through folders)
+          cd folder_name
+
+          # the `ls` command lists all files and folders in the current directory
+          ls
+
+          # the `mkdir` command is used to create a new directory (folder)
+          mkdir folder_name
+
+          # the `touch` command creates a new file
+          touch file_name.ext
+
+          # the `rm` command removes (deletes) a file
+          rm file_name.ext
+
+          # the `start` command opens a file in its default application (e.g. `start my-website.html` opens that HTML file in your default web browser)
+          start file_name.ext
+
+          # the `code` command opens a file or directory in VSCode
+          code .                # << opens the current directory in VSCode
+          code file_name.ext    # << opens the file `file_name.ext` in VSCode
+          code folder_name      # << opens the directory `folder_name` in VSCode
+        </textarea>
+      </div>
+    </div>
+
+    <!-- Code mirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js" integrity="sha512-JpMCZgesTWh1iu/8ujURbwkJBgbgFWe3sTNCHdIuEvPwZuuN0nTUr2yawXahpgdEK7FOZUlW254Rp7AyDYJdjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/xml/xml.min.js" integrity="sha512-UWfBe6aiZInvbBlm91IURVHHTwigTPtM3M4B73a8AykmxhDWq4EC/V2rgUNiLgmd/i0y0KWHolqmVQyJ35JsNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js" integrity="sha512-DJ/Flq7rxJDDhgkO49H/rmidX44jmxWot/ku3c+XXEF9XFal78KIpu7w6jEaQhK4jli1U3/yOH+Rp3cIIEYFPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/shell/shell.min.js" integrity="sha512-hPxGlSDYCFC8zXHIbOSD/Qo5DDCxyrfWnMvwVi1TutjhPOsf9Sgo6bu5SRDXIbuWfi22YRr+RpKwJ4XOzj7mnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      CodeMirror.fromTextArea(document.getElementById('git-bash-codearea'), {
+        // htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('git-codearea'), {
+        // htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('cd-test'), {
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+    </script>
+  </body>
+</html>

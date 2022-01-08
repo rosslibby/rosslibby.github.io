@@ -32,7 +32,7 @@ body {
   h1 {
     color: #2e2e2e;
     font-family: $font;
-    font-size: 8vw;
+    font-size: 6vw;
     font-weight: 200;
     text-align: center;
 
@@ -74,7 +74,7 @@ body {
     color: #ffffff;
     cursor: pointer;
     font-family: $font;
-    font-size: 16vw;
+    font-size: 8vw;
     font-weight: 700;
     margin: 0;
     padding: 0 2.5rem;
@@ -145,7 +145,7 @@ body {
     font-weight: 200;
 
     li {
-      line-height: 2.325rem;
+      line-height: 2.75rem;
     }
   }
 
@@ -159,6 +159,27 @@ body {
 
     h1, li {
       color: #00e7ff;
+    }
+
+    p {
+      color: rgba(49, 231, 255, .75);
+      font-family: $font;
+      font-size: 2rem;
+      font-weight: 200;
+
+      a {
+        border-bottom: 1px dotted #31e7ff;
+        color: rgba(49, 231, 255, .75);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all .15s ease;
+
+        &:hover {
+          color: rgba(49, 231, 255, 1);
+          border-bottom: 1px solid #31e7ff;
+          text-shadow: 0 1px 2px #2f1b81;
+        }
+      }
     }
 
     &:last-child {
@@ -175,6 +196,90 @@ body {
 
         h1, li {
           color: #00e7ff;
+        }
+      }
+    }
+
+    &--vscode {
+      &:last-child {
+        background-color: #000e22;
+
+        h1, li {
+          color: #00ffa2;
+        }
+
+        p {
+          color: rgba(0, 255, 162, .75);
+
+          a {
+            border-bottom: 1px dotted #00ffa2;
+            color: rgba(0, 255, 162, .75);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .15s ease;
+    
+            &:hover {
+              border-bottom: 1px solid #00ffa2;
+              color: rgba(0, 255, 162, 1);
+              text-shadow: 0 1px 2px #000000;
+            }
+          }
+        }
+      }
+    }
+
+    &--github {
+      &:last-child {
+        background-color: #030b1e;
+
+        h1, li {
+          color: #91e3de;
+        }
+
+        p {
+          color: rgba(145, 227, 222, .75);
+
+          a {
+            border-bottom: 1px dotted #91e3de;
+            color: rgba(145, 227, 222, .75);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .15s ease;
+
+            &:hover {
+              border-bottom: 1px solid #91e3de;
+              color: rgba(145, 227, 222, 1);
+              text-shadow: 0 1px 2px #081833;
+            }
+          }
+        }
+      }
+    }
+
+    &--git-bash {
+      &:last-child {
+        background-color: #ff4037;
+
+        h1, li {
+          color: #091030;
+        }
+
+        p {
+          color: rgba(9, 16, 48, .75);
+
+          a {
+            border-bottom: 1px dotted #091030;
+            color: rgba(9, 16, 48, .75);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .15s ease;
+
+            &:hover {
+              border-bottom: 1px solid #091030;
+              color: rgba(9, 16, 48, 1);
+              text-shadow: 0 1px 2px #8f2a25;
+            }
+          }
         }
       }
     }
@@ -490,6 +595,7 @@ h6 + code {
   font-size: 1rem;
   line-height: 1.325rem;
   padding: 1rem;
+  min-height: 33rem;
   width: 100%;
 
   .CodeMirror {
@@ -498,4 +604,16 @@ h6 + code {
       padding-right: 1rem;
     }
   }
+}
+
+#cd-test {
+  &+ .cm-s-material-palenight {
+    height: 3rem;
+    min-height: unset;
+  }
+}
+
+.cd-test {
+  position: relative;
+  width: 100%;
 }

@@ -27,7 +27,7 @@ body {
 .about h1 {
   color: #2e2e2e;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: 200;
   text-align: center;
 }
@@ -65,7 +65,7 @@ body {
   color: #ffffff;
   cursor: pointer;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 16vw;
+  font-size: 8vw;
   font-weight: 700;
   margin: 0;
   padding: 0 2.5rem;
@@ -128,7 +128,7 @@ body {
   font-weight: 200;
 }
 .difference ul li {
-  line-height: 2.325rem;
+  line-height: 2.75rem;
 }
 .difference .column {
   background-color: #5f37ff;
@@ -141,6 +141,24 @@ body {
 .difference .column h1, .difference .column li {
   color: #00e7ff;
 }
+.difference .column p {
+  color: rgba(49, 231, 255, 0.75);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+}
+.difference .column p a {
+  border-bottom: 1px dotted #31e7ff;
+  color: rgba(49, 231, 255, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column p a:hover {
+  color: #31e7ff;
+  border-bottom: 1px solid #31e7ff;
+  text-shadow: 0 1px 2px #2f1b81;
+}
 .difference .column:last-child {
   background-color: #00e7ff;
 }
@@ -152,6 +170,69 @@ body {
 }
 .difference .column--sole:last-child h1, .difference .column--sole:last-child li {
   color: #00e7ff;
+}
+.difference .column--vscode:last-child {
+  background-color: #000e22;
+}
+.difference .column--vscode:last-child h1, .difference .column--vscode:last-child li {
+  color: #00ffa2;
+}
+.difference .column--vscode:last-child p {
+  color: rgba(0, 255, 162, 0.75);
+}
+.difference .column--vscode:last-child p a {
+  border-bottom: 1px dotted #00ffa2;
+  color: rgba(0, 255, 162, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--vscode:last-child p a:hover {
+  border-bottom: 1px solid #00ffa2;
+  color: #00ffa2;
+  text-shadow: 0 1px 2px #000000;
+}
+.difference .column--github:last-child {
+  background-color: #030b1e;
+}
+.difference .column--github:last-child h1, .difference .column--github:last-child li {
+  color: #91e3de;
+}
+.difference .column--github:last-child p {
+  color: rgba(145, 227, 222, 0.75);
+}
+.difference .column--github:last-child p a {
+  border-bottom: 1px dotted #91e3de;
+  color: rgba(145, 227, 222, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--github:last-child p a:hover {
+  border-bottom: 1px solid #91e3de;
+  color: #91e3de;
+  text-shadow: 0 1px 2px #081833;
+}
+.difference .column--git-bash:last-child {
+  background-color: #ff4037;
+}
+.difference .column--git-bash:last-child h1, .difference .column--git-bash:last-child li {
+  color: #091030;
+}
+.difference .column--git-bash:last-child p {
+  color: rgba(9, 16, 48, 0.75);
+}
+.difference .column--git-bash:last-child p a {
+  border-bottom: 1px dotted #091030;
+  color: rgba(9, 16, 48, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--git-bash:last-child p a:hover {
+  border-bottom: 1px solid #091030;
+  color: #091030;
+  text-shadow: 0 1px 2px #8f2a25;
 }
 
 .how-to {
@@ -438,6 +519,7 @@ h6 + code {
   font-size: 1rem;
   line-height: 1.325rem;
   padding: 1rem;
+  min-height: 33rem;
   width: 100%;
 }
 .cm-s-material-palenight .CodeMirror-linenumber {
@@ -445,4 +527,14 @@ h6 + code {
   padding-right: 1rem;
 }
 
-/*# sourceMappingURL=style.css.map */
+#cd-test + .cm-s-material-palenight {
+  height: 3rem;
+  min-height: unset;
+}
+
+.cd-test {
+  position: relative;
+  width: 100%;
+}
+
+/*# sourceMappingURL=dev-environment.css.map */
