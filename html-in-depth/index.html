@@ -1,0 +1,276 @@
+<html>
+  <head>
+    <title>HTML: An in-depth look</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="html-in-depth.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/material-palenight.min.css" integrity="sha512-uIAyXysSwPKYTS4BrBQGkt7i9ozdNjNA4jXfjFDl6fWIc2zDllleoiY5EkH7Ib2j+Qb8YJx4a5qy192JZqxqVg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://kit.fontawesome.com/e21d1f3409.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="about about--center">
+      <h1>Let's build an <span>HTML website</span></h1>
+      <span class="about-arrow"><i class="fa-thin fa-angle-down"></i></span>
+    </div>
+    <div class="difference">
+      <div class="column column--sole">
+        <h1><strong>Comments</strong> in HTML</h1>
+        <p>Every programming language we will use has <em>comments</em>. Comments are human-readable text <em>that is not interpreted as code</em>. Comments often serve as notes that the programmer leaves to him- or her-self, or to inform <em>other programmers</em> what is going on in a certain part of the code. Comments are also incredibly useful for <em>temporarily removing</em> pieces of code that the programmer may wish to use <em>at some point in the future</em>, though it may not be currently relevant.</p>
+        <p>Comments in HTML are created by typing the following:</p>
+        <p class="code-container">
+          <code style="font-size: 1.5rem;">&lt;!-- This is a comment. It will not be treated as code and it will not be displayed on the website. --&gt;</code>
+        </p>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--github">
+        <h1><strong>Layout</strong> in HTML</h1>
+        <p>Websites are divided into multiple sections within their HTML code, where<br>each section is <em>styled</em> in order to add form to the information.</p>
+        <p>We can lay out content in HTML using a couple of key elements:</p>
+        <ul>
+          <li>Dividing containers <code style="font-size: 1rem">&lt;div&gt;...&lt;/div&gt;</code></li>
+          <li>Inline containers <code style="font-size: 1rem">&lt;span&gt;...&lt;/span&gt;</code></li>
+        </ul>
+        <p>We use the <code>&lt;div&gt;</code> tag when we need to separate some elements from other elements, whether for layout or aesthetic purposes.</p>
+        <textarea id="html-no-div">&lt;!-- Below, you can see a heading and a paragraph --&gt;
+&lt;h2&gt;About this website&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.&lt;/p&gt;
+        </textarea>
+        <textarea id="html-div">&lt;!-- Here, you will see the same heading and paragraph, this time contained within a &lt;div&gt;...&lt;/div&gt; tag --&gt;
+
+&lt;div&gt;
+  &lt;h2&gt;About this website&lt;/h2&gt;
+
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Below is the same content, this time with styling applied to the div --&gt;
+
+&lt;div style="background-color: #efefef; box-sizing: border-box; border-radius: 8px; box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2); margin: 20px auto; padding: 20px;"&gt;
+  &lt;h2&gt;About this website&lt;/h2&gt;
+
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.&lt;/p&gt;
+&lt;/div&gt;
+        </textarea>
+        <p>Below, you can see the results of each line of code shown above.</p>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Lines 2-4</span>
+          <div>            
+            <h2>About this website</h2>
+            
+            <p style="all: unset">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.</p>
+          </div>
+        </div>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Lines 3-7</span>
+          <div>            
+            <div>
+              <h2>About this website</h2>
+            
+              <p style="all: unset">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.</p>
+            </div>
+          </div>
+        </div>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Lines 11-15</span>
+          <div style="background-color: #030b1e; box-sizing: border-box; border-radius: 8px; box-shadow: 0 0 17px 8px rgb(0 0 0 / 25%); margin: 20px auto; padding: 24px 30px; color: #a9b1db; font-family: sans-serif; font-weight: 100; line-height: 1.7rem; font-size: .95rem;">
+            <h2>About this website</h2>
+          
+            <p style="all: unset;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.</p>
+          </div>
+        </div>
+        <p>The second and third examples above have the same exact HTML structure, with the only difference being that the third example also has <em>styling</em> on the div. The styling impacts all of the content contained within the div.</p>
+        <p>In order to demonstrate how the div impacts only the content contained within its tags, let's look at what would have happened had we wrapped the div only around the paragraph and left the heading out of it:</p>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Lines 11-15</span>
+          <div>
+            <h2>About this website</h2>
+            
+            <div style="background-color: #030b1e; box-sizing: border-box; border-radius: 8px; box-shadow: 0 0 17px 8px rgb(0 0 0 / 25%); margin: 20px auto; padding: 24px 30px; color: #a9b1db; font-family: sans-serif; font-weight: 100; line-height: 1.7rem; font-size: .95rem;">
+              <p style="all: unset;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra ex sed mi tempor dapibus. Morbi accumsan ipsum nec egestas euismod. Mauris ullamcorper justo ullamcorper libero mattis dignissim. Cras placerat diam vel purus bibendum sodales. Integer consectetur malesuada justo a fringilla. Morbi purus magna, commodo id augue eu, fringilla porttitor arcu. Duis ut ornare dui, eu malesuada nisl. Integer vel ornare ipsum. Aliquam tristique consequat enim, et ultricies nisl mollis hendrerit. Aliquam massa lacus, hendrerit vel ultricies et, auctor eu diam. Nulla facilisi. Praesent sed magna pretium, condimentum risus a, laoreet odio.</p>
+            </div>
+          </div>
+        </div>
+        <p>We use the <code>&lt;span&gt;</code> tag to delineate <em>inline items</em>. For example, we could have a paragraph of text in which only a few key words are highlighted. We would use a <code>&lt;span&gt;</code> to accomplish this.</p>
+        <textarea id="html-span">&lt;!-- Below, you can see a paragraph tag containing a sentence. --&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+&lt;!-- Here you will see that same sentence with a few words wrapped in a &lt;span&gt;...&lt;/span&gt; tag --&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;span&gt;consectetur adipiscing elit.&lt;/span&gt;&lt;/p&gt;
+
+&lt;!-- The span tag can be styled to make its contained text appear - and even function - different from the rest of the text --&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, &lt;span style="font-family: monospace; text-transform: uppercase; color: red; padding: 8px; border: 2px solid red;"&gt;consectetur adipiscing elit.&lt;/span&gt;&lt;/p&gt;</textarea>
+        <p>Below, you can see the results of each line of code shown above.</p>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Line 2</span>
+          <p style="all: unset;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Line 5</span>
+          <p style="all: unset;">Lorem ipsum dolor sit amet, <span>consectetur adipiscing elit.</span></p>
+        </div>
+        <div class="code-block code-block--results" style="display: flex; flex-direction: row; width: 60vw;">
+          <span style="font-family: monospace; display: flex; margin-right: .5rem; padding: 0 1rem; margin-left: -2rem; height: calc(100% + 2rem); align-items: center; margin-top: -1rem; background-color: #2c60db; color: #ffffff;">Line 8</span>
+          <p style="all: unset;">Lorem ipsum dolor sit amet, <span style="font-family: monospace; text-transform: uppercase; color: red; padding: 8px; border: 2px solid red;">consectetur adipiscing elit.</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--vscode">
+        <h1><strong>Visual Studio Code</strong> IDE</h1>
+        <ul>
+          <li>Integrated Development Environment (IDE)</li>
+          <li>Supports 16 languages out of the box</li>
+          <li>Automatic code highlighting</li>
+          <li>Custom themes for appearance</li>
+          <li>Built-in terminal (useful for command line tools)</li>
+        </ul>
+        <p>Download Visual Studio Code <a href="https://code.visualstudio.com" target="_blank">here</a>.</p>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--github">
+        <h1><strong>Github</strong> code versioning tool</h1>
+        <ul>
+          <li>Cloud-hosted code repositories</li>
+          <li>Code versioning</li>
+          <li>Code history</li>
+          <li>Collaboration tooling</li>
+        </ul>
+        <p>Sign up for Github <a href="https://github.com" target="_blank">here</a>.</p>
+
+        <p>Important Git commands:</p>
+
+        <textarea id="git-codearea">
+          # the `git add` command adds modified files and/or directories to your local repository
+          git add .              # << adds every modified file and/or directory in the current working directory to your local git repository
+          git add file_name.ext  # << adds the file `file_name.ext` to your local git repository
+          git add folder_name    # << adds the folder `folder_name` to your local git repository
+
+          # the `git commit` command captures a snapshot of your project's current changes. You must add a commit message using the `-m` flag.
+          git commit -m 'updated the color of the "sign-up" button'
+
+          # the `git push` command uploads your changes to you cloud-based git repository, storing your code online so that you can access it from anywhere
+          git push
+
+          # the `git branch` command shows the current branch you are working in.
+          # If your code project were represented by a tree, each branch would be
+          # a different feature you are working on. For example, one "branch" of the
+          # tree could be the content of your website, while another could be the
+          # interactive portion, such as sign-up or login functionality.
+          # While each of these branches has the same underlying code (since they
+          # are on the same tree), making a change to one branch does not modify
+          # any of the other branches
+          git branch
+
+          # the `git checkout` command selects the branch you wish to work in
+          git checkout branch-name
+
+          # the `git pull` command downloads the most current code from your online repository
+          git pull
+
+          # the `git log` command shows you a record of each change that has been made in your git repository
+          git log
+        </textarea>
+      </div>
+    </div>
+    <div class="difference">
+      <div class="column column--git-bash">
+        <h1><strong>Git Bash</strong> terminal</h1>
+        <ul>
+          <li>Supports unix commands in a Windows environment</li>
+          <li>Integrates with VSCode <span>code</span> command</li>
+          <li>Streamlines development</li>
+        </ul>
+        <p>Download Git Bash <a href="https://git-scm.com/download" target="_blank">here</a>.</p>
+
+        <p>Need-to-know commands:</p>
+
+        <textarea id="git-bash-codearea">
+          # the `cd` command changes the directory (aka it is used to navigate through folders)
+          cd folder_name
+
+          # the `ls` command lists all files and folders in the current directory
+          ls
+
+          # the `mkdir` command is used to create a new directory (folder)
+          mkdir folder_name
+
+          # the `touch` command creates a new file
+          touch file_name.ext
+
+          # the `rm` command removes (deletes) a file
+          rm file_name.ext
+
+          # the `start` command opens a file in its default application (e.g. `start my-website.html` opens that HTML file in your default web browser)
+          start file_name.ext
+
+          # the `code` command opens a file or directory in VSCode
+          code .                # << opens the current directory in VSCode
+          code file_name.ext    # << opens the file `file_name.ext` in VSCode
+          code folder_name      # << opens the directory `folder_name` in VSCode
+        </textarea>
+      </div>
+    </div>
+
+    <!-- Code mirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js" integrity="sha512-JpMCZgesTWh1iu/8ujURbwkJBgbgFWe3sTNCHdIuEvPwZuuN0nTUr2yawXahpgdEK7FOZUlW254Rp7AyDYJdjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/xml/xml.min.js" integrity="sha512-UWfBe6aiZInvbBlm91IURVHHTwigTPtM3M4B73a8AykmxhDWq4EC/V2rgUNiLgmd/i0y0KWHolqmVQyJ35JsNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js" integrity="sha512-DJ/Flq7rxJDDhgkO49H/rmidX44jmxWot/ku3c+XXEF9XFal78KIpu7w6jEaQhK4jli1U3/yOH+Rp3cIIEYFPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/shell/shell.min.js" integrity="sha512-hPxGlSDYCFC8zXHIbOSD/Qo5DDCxyrfWnMvwVi1TutjhPOsf9Sgo6bu5SRDXIbuWfi22YRr+RpKwJ4XOzj7mnw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      CodeMirror.fromTextArea(document.getElementById('html-no-div'), {
+        htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'xml',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('html-div'), {
+        htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'xml',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('html-span'), {
+        htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'xml',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('git-bash-codearea'), {
+        // htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('git-codearea'), {
+        // htmlMode: true,
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+      CodeMirror.fromTextArea(document.getElementById('cd-test'), {
+        lineNumbers: true,
+        lineWrapping: true,
+        mode: 'shell',
+        tabSize: 2,
+        theme: 'material-palenight'
+      })
+    </script>
+  </body>
+</html>

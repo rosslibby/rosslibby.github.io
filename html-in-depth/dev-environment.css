@@ -1,0 +1,540 @@
+::selection {
+  background-color: #ff0066;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+/**
+ * Let's talk about websites
+ */
+.about {
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+}
+.about--center {
+  align-items: center;
+}
+.about-arrow {
+  font-size: 8vw;
+}
+.about h1 {
+  color: #2e2e2e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 6vw;
+  font-weight: 200;
+  text-align: center;
+}
+.about h1 span {
+  border-bottom: 4px solid #2e2e2e;
+  display: inline-flex;
+  transition: all 0.3s ease;
+}
+.about h1 span:hover {
+  border-color: #00ffe7;
+}
+.about h2 {
+  color: #2e2e2e;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 6rem;
+  font-weight: 200;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.html {
+  align-items: center;
+  background-color: #020c1a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100vw;
+}
+.html h1 {
+  border: 2.25rem ridge white;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 8vw;
+  font-weight: 700;
+  margin: 0;
+  padding: 0 2.5rem;
+}
+.html h1:hover, .html h1.active {
+  border-color: #00ffff;
+  color: #00ff95;
+  transform: skew(5deg);
+  transition: all 0.35s ease-in-out;
+}
+.html h3 {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 4rem;
+  font-weight: 200;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  padding: 2rem;
+  margin: 0.5em;
+  border-radius: 0.5rem;
+}
+.html h3:hover {
+  background-color: #ff0066;
+}
+.html h3.visible {
+  opacity: 1;
+}
+
+.difference {
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  height: 120vh;
+  margin: 0 auto;
+  width: 100vw;
+}
+@media screen and (max-width: 30rem) {
+  .difference {
+    flex-direction: column;
+    height: 240vh;
+  }
+  .difference .column {
+    width: 100%;
+  }
+  .difference .column h1 {
+    font-size: 3rem;
+  }
+}
+.difference h1 {
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 100;
+  margin: 0;
+}
+.difference ul {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.625rem;
+  font-weight: 200;
+}
+.difference ul li {
+  line-height: 2.75rem;
+}
+.difference .column {
+  background-color: #5f37ff;
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 4rem;
+  display: flex;
+  flex-grow: 1;
+}
+.difference .column h1, .difference .column li {
+  color: #00e7ff;
+}
+.difference .column p {
+  color: rgba(49, 231, 255, 0.75);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+}
+.difference .column p a {
+  border-bottom: 1px dotted #31e7ff;
+  color: rgba(49, 231, 255, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column p a:hover {
+  color: #31e7ff;
+  border-bottom: 1px solid #31e7ff;
+  text-shadow: 0 1px 2px #2f1b81;
+}
+.difference .column:last-child {
+  background-color: #00e7ff;
+}
+.difference .column:last-child h1, .difference .column:last-child li {
+  color: #5f37ff;
+}
+.difference .column--sole:last-child {
+  background-color: #5f37ff;
+}
+.difference .column--sole:last-child h1, .difference .column--sole:last-child li {
+  color: #00e7ff;
+}
+.difference .column--vscode:last-child {
+  background-color: #000e22;
+}
+.difference .column--vscode:last-child h1, .difference .column--vscode:last-child li {
+  color: #00ffa2;
+}
+.difference .column--vscode:last-child p {
+  color: rgba(0, 255, 162, 0.75);
+}
+.difference .column--vscode:last-child p a {
+  border-bottom: 1px dotted #00ffa2;
+  color: rgba(0, 255, 162, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--vscode:last-child p a:hover {
+  border-bottom: 1px solid #00ffa2;
+  color: #00ffa2;
+  text-shadow: 0 1px 2px #000000;
+}
+.difference .column--github:last-child {
+  background-color: #030b1e;
+}
+.difference .column--github:last-child h1, .difference .column--github:last-child li {
+  color: #91e3de;
+}
+.difference .column--github:last-child p {
+  color: rgba(145, 227, 222, 0.75);
+}
+.difference .column--github:last-child p a {
+  border-bottom: 1px dotted #91e3de;
+  color: rgba(145, 227, 222, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--github:last-child p a:hover {
+  border-bottom: 1px solid #91e3de;
+  color: #91e3de;
+  text-shadow: 0 1px 2px #081833;
+}
+.difference .column--git-bash:last-child {
+  background-color: #ff4037;
+}
+.difference .column--git-bash:last-child h1, .difference .column--git-bash:last-child li {
+  color: #091030;
+}
+.difference .column--git-bash:last-child p {
+  color: rgba(9, 16, 48, 0.75);
+}
+.difference .column--git-bash:last-child p a {
+  border-bottom: 1px dotted #091030;
+  color: rgba(9, 16, 48, 0.75);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.difference .column--git-bash:last-child p a:hover {
+  border-bottom: 1px solid #091030;
+  color: #091030;
+  text-shadow: 0 1px 2px #8f2a25;
+}
+
+.how-to {
+  background-color: #030718;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 120vh;
+  justify-content: center;
+  padding: 0 8rem;
+  padding-bottom: 30rem;
+  width: 100vw;
+}
+@media screen and (max-width: 30rem) {
+  .how-to {
+    padding: 0 1.5rem;
+  }
+}
+.how-to .title {
+  border-bottom: 0.5rem solid #6600ff;
+  border-radius: 0.5rem;
+  font-size: 4rem;
+  font-weight: 100;
+  padding: 2rem;
+  text-align: center;
+  margin: 2em 0;
+}
+@media screen and (max-width: 30rem) {
+  .how-to .title {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+}
+.how-to p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 2.5rem;
+  font-weight: 200;
+  line-height: 4rem;
+  letter-spacing: 0.1rem;
+}
+.how-to p strong {
+  border-bottom: 2px solid #6600ff;
+  color: #ffffff;
+}
+@media screen and (max-width: 30rem) {
+  .how-to p {
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+  }
+}
+.how-to .code {
+  font-size: 8rem;
+  font-weight: 300;
+}
+@media screen and (max-width: 30rem) {
+  .how-to .code {
+    font-size: 0.825rem;
+    overflow: scroll;
+  }
+}
+
+/**
+ * Show the elements in brilliant style
+ */
+main {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100vw;
+}
+@media screen and (max-width: 30rem) {
+  main {
+    flex-direction: column;
+  }
+  main .column {
+    width: 100vw;
+  }
+  main .column .element {
+    height: auto;
+    margin: 5vw;
+    width: 90vw;
+  }
+}
+
+.column {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  width: 20vw;
+}
+.column .element {
+  background-color: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 0.25rem 0 rgba(175, 175, 175, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 14vw;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+  padding: 1.25rem;
+  width: calc(100% - 1rem);
+}
+.column .element code {
+  background-color: #1f2f3a;
+}
+.column .element:hover {
+  background-color: #6e00ffde;
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+.column .element:hover label {
+  color: #ffffff;
+}
+.column:first-child .element {
+  border-left: 0;
+}
+
+label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #666666;
+}
+
+pre {
+  background-color: #1d435e;
+}
+
+.code-container {
+  border-radius: 0.325rem;
+  overflow: scroll;
+}
+
+code {
+  padding: 0.625rem;
+  background-color: #1d435e;
+  color: #00fff5;
+  border-radius: 0.325rem;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 30rem) {
+  code {
+    display: inline-flex;
+    white-space: nowrap;
+    font-size: 0.825rem;
+    letter-spacing: 0;
+  }
+}
+
+.code-block {
+  background-color: #1d435e;
+  border-radius: 0.325rem;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+}
+.code-block--results {
+  background-color: #ffffff;
+  border-radius: 0.325rem;
+  box-sizing: border-box;
+  color: #000000;
+  margin-top: 2rem;
+  overflow: hidden;
+  padding: 1rem 2rem;
+  position: relative;
+}
+.code-block--results label {
+  background-color: gray;
+  border-bottom-right-radius: 0.125rem;
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 0.825rem;
+  left: 0;
+  padding: 0.325rem 0.5rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+}
+.code-block--results p {
+  color: #000000;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.code-block code {
+  background-color: transparent;
+}
+
+h1 + code,
+h2 + code,
+h3 + code,
+h4 + code,
+h5 + code,
+h6 + code {
+  margin-top: -0.75rem;
+}
+
+/**
+ * Interactive code editor
+ */
+.code-editor {
+  align-items: center;
+  background-color: #1d435e;
+  border: 0.325rem solid transparent;
+  border-radius: 0.325rem;
+  box-sizing: border-box;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  min-height: 5rem;
+  padding: 1.25rem;
+  position: relative;
+  transition: all 0.15s ease-in-out;
+}
+.code-editor--invalid {
+  border-color: #ff004c;
+}
+.code-editor--valid {
+  border-color: #00ffe7;
+}
+.code-editor-label {
+  color: rgba(3, 7, 24, 0.55);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  left: calc(1.25rem + 1px);
+  position: absolute;
+  top: calc(1.25rem + 1px);
+  z-index: 1;
+}
+.code-editor-label .invisible {
+  display: none;
+}
+.code-editor-badge {
+  font-size: 2rem;
+}
+.code-editor-badge--invalid {
+  color: #ff004c;
+}
+.code-editor-badge--valid {
+  color: #00ffe7;
+}
+.code-editor input {
+  background-color: transparent;
+  border: 0;
+  color: #ffffff;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  flex-grow: 1;
+  font-size: 2rem;
+  font-weight: 200;
+  position: relative;
+  z-index: 2;
+}
+.code-editor input:focus {
+  outline: none;
+}
+.code-editor input.valid {
+  color: #00ffe7;
+}
+.code-editor input.invalid {
+  color: #ff004c;
+}
+@media screen and (max-width: 30rem) {
+  .code-editor {
+    min-height: 4rem;
+    padding: 0.625rem;
+  }
+  .code-editor input, .code-editor label {
+    font-size: 1.125rem;
+  }
+  .code-editor label {
+    left: calc(1.25rem - 5px);
+    top: calc(1.25rem - 3px);
+  }
+}
+
+/**
+ * Inline code editor
+ */
+.cm-s-material-palenight {
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.325rem;
+  padding: 1rem;
+  min-height: 33rem;
+  width: 100%;
+}
+.cm-s-material-palenight .CodeMirror-linenumber {
+  border-right: 1px solid #676e952b;
+  padding-right: 1rem;
+}
+
+#cd-test + .cm-s-material-palenight {
+  height: 3rem;
+  min-height: unset;
+}
+
+.cd-test {
+  position: relative;
+  width: 100%;
+}
+
+/*# sourceMappingURL=dev-environment.css.map */
